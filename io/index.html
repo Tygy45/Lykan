@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Калькулятор с историей</title>
+    <title>Калькулятор с памятью</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,13 +18,13 @@
                 <!-- Первый ряд -->
                 <button class="btn btn-function" onclick="calculator.clearAll()">ON/AC</button>
                 <button class="btn btn-function" onclick="calculator.clearEntry()">CE/C</button>
-                <button class="btn btn-function" onclick="calculator.memoryClear()">MC</button>
+                <button class="btn btn-function" onclick="calculator.squareRoot()">√</button>
                 <button class="btn btn-operator" onclick="calculator.chooseOperation('÷')">÷</button>
                 
                 <!-- Второй ряд -->
-                <button class="btn btn-function" onclick="calculator.squareRoot()">√</button>
                 <button class="btn btn-function" onclick="calculator.percentage()">%</button>
                 <button class="btn btn-function" onclick="calculator.toggleSign()">+/-</button>
+                <button class="btn btn-function" onclick="calculator.delete()">⌫</button>
                 <button class="btn btn-operator" onclick="calculator.chooseOperation('×')">×</button>
                 
                 <!-- Третий ряд -->
@@ -52,23 +52,16 @@
                 
                 <!-- Седьмой ряд -->
                 <button class="btn btn-number" onclick="calculator.appendNumber('.')">.</button>
+                <button class="btn btn-function" onclick="calculator.memoryRecall()">MR</button>
                 <button class="btn btn-function" onclick="calculator.memoryUnit()">MU</button>
-                <button class="btn btn-function" onclick="calculator.delete()">⌫</button>
+                
+                <!-- Восьмой ряд - кнопки памяти -->
+                <button class="btn btn-function" onclick="calculator.memoryAdd()">M+</button>
+                <button class="btn btn-function" onclick="calculator.memorySubtract()">M-</button>
+                <button class="btn btn-function" onclick="calculator.memoryClear()">MC</button>
             </div>
         </div>
         
-        <div class="history-panel">
-            <div class="history-header">
-                <h3>История вычислений</h3>
-                <div class="history-controls">
-                    <button class="btn btn-history" onclick="historyManager.clearHistory()">Очистить</button>
-                    <button class="btn btn-history" onclick="historyManager.toggleHistory()">Скрыть/Показать</button>
-                </div>
-            </div>
-            <div class="history-content" id="history-content">
-                <div class="history-empty">История пуста</div>
-            </div>
-        </div>
     </div>
     
     <script src="script.js"></script>

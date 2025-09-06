@@ -16,11 +16,9 @@ body {
 
 .container {
     display: flex;
-    gap: 30px;
-    max-width: 800px;
-    width: 100%;
-    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .calculator {
@@ -150,133 +148,10 @@ body {
     background: rgba(99, 102, 241, 1);
 }
 
-.history-panel {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    padding: 25px;
-    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    min-width: 300px;
-    max-width: 400px;
-    height: fit-content;
-}
-
-.history-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.history-header h3 {
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.history-controls {
-    display: flex;
-    gap: 10px;
-}
-
-.btn-history {
-    background: rgba(59, 130, 246, 0.8);
-    color: white;
-    font-size: 0.9rem;
-    padding: 8px 16px;
-    min-height: auto;
-    border-radius: 10px;
-}
-
-.btn-history:hover {
-    background: rgba(59, 130, 246, 1);
-}
-
-.history-content {
-    max-height: 400px;
-    overflow-y: auto;
-    padding-right: 10px;
-}
-
-.history-content::-webkit-scrollbar {
-    width: 6px;
-}
-
-.history-content::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 3px;
-}
-
-.history-content::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 3px;
-}
-
-.history-content::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.5);
-}
-
-.history-item {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    padding: 15px;
-    margin-bottom: 10px;
-    color: white;
-    border-left: 4px solid rgba(59, 130, 246, 0.8);
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.history-item:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: translateX(5px);
-}
-
-.history-expression {
-    font-size: 1.1rem;
-    margin-bottom: 5px;
-    color: rgba(255, 255, 255, 0.8);
-}
-
-.history-result {
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: white;
-}
-
-.history-time {
-    font-size: 0.8rem;
-    color: rgba(255, 255, 255, 0.6);
-    margin-top: 5px;
-}
-
-.history-empty {
-    text-align: center;
-    color: rgba(255, 255, 255, 0.6);
-    font-style: italic;
-    padding: 20px;
-}
-
-.history-hidden {
-    display: none;
-}
 
 @media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
-    
     .calculator {
         min-width: 280px;
-    }
-    
-    .history-panel {
-        min-width: 280px;
-        max-width: 320px;
     }
     
     .btn {
